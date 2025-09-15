@@ -3,12 +3,24 @@ import {createHTML_Element} from '../helperFunction/helper.js';
 
 
 
-
-
 const header = createHTML_Element('header',{
     placement: {target: "body", method: "append"},
     styles:{width: "100%", backgroundColor: "#89CFF0", display: "flex", alignItems: "center", justifyContent: 'space-between', padding: ""}
 });
+
+
+const trustSection = createHTML_Element('section',{
+    styles: {
+        width: '100%',
+        padding: '1rem',
+        backgroundColor: '#abdfff',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignContent: 'center',
+    },
+    placement: {target: 'header', method: 'before'},
+    innerHTML: `<p>trust 1</p> <p>trust 2</p> <p>trust 3</p>`
+})
 
 const hamburger = createHTML_Element('button',{
     attributes: {id: 'hamburger-menu'},
@@ -48,6 +60,23 @@ const thirdHamburgerLine = createHTML_Element('span',{
     classes: 'thirdHamburgerLine',
     placement: {target: '#hamburger-menu', method: 'append'}
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -105,4 +134,4 @@ const logo = createHTML_Element('img',{
 
 
 
-export {header};
+export {header, trustSection};
