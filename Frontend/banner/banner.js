@@ -5,7 +5,7 @@ const bannerWrapper = createHTML_Element('section', {
     placement: { target: 'header', method: 'after' },
     styles: {
         width: '100%',
-        height: '400px',
+        height: '500px',
         position: 'relative', 
         overflow: 'hidden'
     }
