@@ -1,18 +1,16 @@
 import { createHTML_Element } from "../helperFunction/helper.js";
 
-// Wrapper für Banner (mit Bild + Overlay-Inhalt)
 const bannerWrapper = createHTML_Element('section', {
     attributes: { id: 'bannerWrapper' },
     placement: { target: 'header', method: 'after' },
     styles: {
         width: '100%',
         height: '400px',
-        position: 'relative', // damit das Overlay sich daran orientiert
+        position: 'relative', 
         overflow: 'hidden'
     }
 });
 
-// Banner-Bild
 const babyBanner = createHTML_Element('img', {
     attributes: {
         src: './media/babyBanner.jpg',
@@ -32,7 +30,6 @@ const babyBanner = createHTML_Element('img', {
 
 
 
-// Overlay-Container für Text + Button
 const bannerContent = createHTML_Element('section', {
     classes: 'bannerContent',
     placement: { target: '#bannerWrapper', method: 'append' },
@@ -40,7 +37,7 @@ const bannerContent = createHTML_Element('section', {
         position: 'absolute',
         top: '50%',
         left: '50%',
-        transform: 'translate(-50%, -50%)', // zentriert in der Mitte
+        transform: 'translate(-50%, -50%)',
         color: 'white',
         textAlign: 'center',
     },
