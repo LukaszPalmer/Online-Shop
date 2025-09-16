@@ -12,6 +12,23 @@ const bannerWrapper = createHTML_Element('section', {
     }
 });
 
+// Overlay über dem Banner
+const bannerOverlay = createHTML_Element('div', {
+    classes: 'bannerOverlay',
+    placement: { target: '#bannerWrapper', method: 'append' },
+    styles: {
+        position: 'absolute',
+        bottom: '0',
+        left: '0',
+        width: '100%',
+        height: '100%', // bedeckt das Bild komplett
+        background: 'linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0))', 
+        pointerEvents: 'none' // verhindert, dass es Klicks blockiert
+    }
+});
+
+
+
 const babyBanner = createHTML_Element('img', {
     attributes: {
         src: './media/babyBanner.jpg',
@@ -48,13 +65,15 @@ const bannerContent = createHTML_Element('section', {
         paddingBottom: '1rem'
     },
     innerHTML: `
-        <p>Für dein baby das beste</p>
+        <p>${"Für dein baby das beste".toUpperCase()}</p>
         <h2>Sanft. Sicher. Snoo</h2>
-        <button style="padding: 8px 16px; background: #fff; border: none; cursor: pointer; color: #71797E">
-            Entdecke Mehr
+        <button style="padding: 8px 16px; background: #fff; border: none; cursor: pointer; color: #3b3b3b">
+            entdecke mehr
         </button>
     `
 });
+
+
 
 
 export {babyBanner}

@@ -45,6 +45,7 @@ const productHeading = createHTML_Element('h2',{
     placement: {target: '.productHeading', method: 'append'},
     styles: {
         fontSize: '24px',
+        color: '#3b3b3b'
     },
     text: 'Babymützen'
 })
@@ -65,6 +66,7 @@ const paragraph = createHTML_Element('p',{
     text: 'Baby-Mützen sind wichtige Begleiter, vor allem bei kühlem Wetter. Sie halten den Kopf warm und schützen vor Wind.',
     styles: {
         fontSize: '14px',
+        color: '#696969'
     },
     placement: {target: '.descriptionContainer', mathod: 'append'}
 })
