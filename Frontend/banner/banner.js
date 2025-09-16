@@ -7,7 +7,8 @@ const bannerWrapper = createHTML_Element('section', {
         width: '100%',
         height: '500px',
         position: 'relative', 
-        overflow: 'hidden'
+        overflow: 'hidden',
+        display: 'column'
     }
 });
 
@@ -21,11 +22,9 @@ const babyBanner = createHTML_Element('img', {
         width: '100%',
         height: '100%',
         objectFit: 'cover',
-        display: 'block',
+        display: 'flex',
     }
 });
-
-
 
 
 
@@ -35,19 +34,28 @@ const bannerContent = createHTML_Element('section', {
     placement: { target: '#bannerWrapper', method: 'append' },
     styles: {
         position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
+        bottom: '0',             // unten fixieren
+        left: '0',
+        width: '100%',
+        height: '200px',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center', // vertikal zentriert innerhalb der 200px
+        alignItems: 'center',
+        gap: '1rem',
         color: 'white',
-        textAlign: 'center',
+        fontSize: '16px',
+        paddingBottom: '1rem'
     },
     innerHTML: `
-        <h2>Willkommen bei unserem Shop</h2>
-        <button style="padding: 0.5rem 1rem; background: #fff; border: none; cursor: pointer;">
-            Mehr ansehen
+        <p>Für dein baby das beste</p>
+        <h2>Sanft. Sicher. Snoo</h2>
+        <button style="padding: 8px 16px; background: #fff; border: none; cursor: pointer; color: #71797E">
+            Entdecke Mehr
         </button>
     `
 });
+
 
 export {babyBanner}
 

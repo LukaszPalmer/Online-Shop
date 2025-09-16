@@ -5,28 +5,40 @@ import {createHTML_Element} from '../helperFunction/helper.js';
 
 const header = createHTML_Element('header',{
     placement: {target: "body", method: "append"},
-    styles:{width: "100%", backgroundColor: "#fff", display: "flex", alignItems: "center", justifyContent: 'space-between', padding: ""}
+    styles:{width: "100%", backgroundColor: "#fff", display: "flex", alignItems: "center", justifyContent: 'space-between', padding: "16px 10px"}
 });
 
+
+
+const hamburgerMenu_SearchIcon_Container = createHTML_Element('section',{
+    placement : {target: 'header', mathod: 'append'},
+    classes: 'menuSearchIcon',
+    styles: {
+        width: '60px',
+        display: 'flex',
+        justifyContent: '',
+        gap: '15px'
+    }
+})
 
 const hamburger = createHTML_Element('button',{
     attributes: {id: 'hamburger-menu'},
     styles:{
         border: 'none',
         outline: 'none',
-        backgroundColor: '#89CFF0',
-        width: '10%',
+        backgroundColor: '',
+        width: '30px',
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'end',
-        justifyContent: 'center',
+        alignItems: 'start',
+        justifyContent: 'space-between',
         gap: '0.3rem',
         cursor: 'pointer',
-        order: '3',
+        order: '1',
         padding: '0.3rem',
         flex: '0 0 auto'
     },
-    placement: {target: 'header', method: 'append'}
+    placement: {target: '.menuSearchIcon', method: 'append'}
 })
 
 
@@ -49,41 +61,42 @@ const thirdHamburgerLine = createHTML_Element('span',{
 })
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const iconsContainer = createHTML_Element('section',{
     attributes: {id: 'iconsContainer'},
     placement: {target: 'header', method: 'append'},
     styles: {
         gap: '0 0.5rem',
         display: 'flex',
-        justifyContent: 'flex-end',
-        width: '15%',
-        order: '2',
+        justifyContent: 'space-between',
+        width: '100px',
+        order: '3',
         flex: '0 0 auto',
-        marginLeft: 'auto',
+        marginLeft: '',
+    }
+})
+
+
+const IconSVGFavorite = createHTML_Element('img', {
+    attributes: {src: './media/favorite-outline-rounded.svg', alt: 'hinzufügen'},
+    placement: {target: '#iconsContainer', method: 'append'},
+    styles: {
+        fontSize: '24px'
+    }
+})
+
+
+const IconSearchSVG = createHTML_Element('img',{
+    attributes: {src: './media/iconSearch.svg', alt: 'Suche'},
+    placement: {target: '.menuSearchIcon', method: 'append'},
+    styles: {
+        curson: 'pointer',
+        order: '2'
     }
 })
 
 
 const IconSVG_Cart = createHTML_Element('img',{
-    attributes: {src: './media/shopping-cart.svg', alt: 'Warenkorb'},
+    attributes: {src: './media/roundedShoppingCart.svg', alt: 'Warenkorb'},
     placement: {target: '#iconsContainer', method: 'append'},
     styles:{
         cursor: 'pointer',
@@ -91,7 +104,7 @@ const IconSVG_Cart = createHTML_Element('img',{
 })
 
 const IconUserSVG = createHTML_Element('img',{
-    attributes: {src: './media/user_strokeWidth_1.svg', alt: 'Anmelden'},
+    attributes: {src: './media/userCircle.svg', alt: 'Anmelden'},
     placement: {target: '#iconsContainer', method: "append"},
     styles:{
         cursor: 'pointer',
@@ -102,14 +115,16 @@ const logoContainer = createHTML_Element('section',{
     attributes: {id: 'logoContainer'},
     placement: {target: 'header', method: 'append'},
     styles:{
-        width: '20%',
-        order: '1',
-        flex: '0 0 auto'
+        width: '110px',
+        order: '2',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
     }
 })
 
 const logo = createHTML_Element('img',{
-    attributes: {src: './media/SnooLogo.png', alt: 'Snoo Logo'},
+    attributes: {src: './media/removedBG.png', alt: 'Snoo Logo'},
     placement: {target: '#logoContainer', method: 'append'},
     styles: {
         width: '100%',
@@ -122,3 +137,8 @@ const logo = createHTML_Element('img',{
 
 
 export {header};
+
+
+
+
+
