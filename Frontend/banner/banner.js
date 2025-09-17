@@ -12,7 +12,7 @@ const bannerWrapper = createHTML_Element('section', {
     }
 });
 
-// Overlay über dem Banner
+
 const bannerOverlay = createHTML_Element('div', {
     classes: 'bannerOverlay',
     placement: { target: '#bannerWrapper', method: 'append' },
@@ -21,9 +21,9 @@ const bannerOverlay = createHTML_Element('div', {
         bottom: '0',
         left: '0',
         width: '100%',
-        height: '100%', // bedeckt das Bild komplett
+        height: '100%', 
         background: 'linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0))', 
-        pointerEvents: 'none' // verhindert, dass es Klicks blockiert
+        pointerEvents: 'none' 
     }
 });
 
@@ -51,13 +51,13 @@ const bannerContent = createHTML_Element('section', {
     placement: { target: '#bannerWrapper', method: 'append' },
     styles: {
         position: 'absolute',
-        bottom: '0',             // unten fixieren
+        bottom: '0',             
         left: '0',
         width: '100%',
         height: '200px',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'center', // vertikal zentriert innerhalb der 200px
+        justifyContent: 'center', 
         alignItems: 'center',
         gap: '1rem',
         color: 'white',
