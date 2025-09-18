@@ -3,7 +3,7 @@ import {createHTML_Element} from '../helperFunction/helper.js';
 
 const header = createHTML_Element('header',{
     placement: {target: "body", method: "append"},
-    styles:{width: "100%", backgroundColor: "#fff", display: "flex", alignItems: "center", justifyContent: 'space-between', padding: "16px 10px"}
+    styles:{width: "100%", backgroundColor: "#fff", display: "flex", alignItems: "center", justifyContent: 'space-between', padding: "16px 10px", position: 'relative', zIndex: '2', position: 'sticky', top: '0'}
 });
 
 

@@ -68,7 +68,7 @@ const bannerContent = createHTML_Element('section', {
         <p>${"Für dein baby das beste".toUpperCase()}</p>
         <h2>Sanft. Sicher. Snoo</h2>
         <button style="padding: 8px 16px; background: #fff; border: none; cursor: pointer; color: #3b3b3b">
-            entdecke mehr
+            Entdecke mehr
         </button>
     `
 });
