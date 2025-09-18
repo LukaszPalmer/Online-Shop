@@ -91,7 +91,6 @@ const productSlider = createHTML_Element("section", {
     styles: {
         width: "100%",
         padding: "16px 0px",
-        border: "1px solid red",
     },
 });
 
@@ -99,56 +98,108 @@ const productSlider = createHTML_Element("section", {
 const swipperWrapper = createHTML_Element("div", {
     classes: "swiper-wrapper",
     placement: { target: ".swiper", method: "append" },
-    styles: {width: '50%'}
+    styles: { width: "50%", height: '300px'},
 });
 
 //Beispielprodukte müssen später durch echte Produktbilder ergänzt werden
 const products = [
-    { name: "Baby Mütze 1", img: "./media/babymützen/babycap1.webp" },
-    { name: "Baby Mütze 2", img: "https://via.placeholder.com/300x300?text=Baby+Mütze+2" },
-    { name: "Baby Mütze 3", img: "https://via.placeholder.com/300x300?text=Baby+Mütze+3" },
-    { name: "Baby Mütze 4", img: "https://via.placeholder.com/300x300?text=Baby+Mütze+4" },
-    { name: "Baby Mütze 5", img: "https://via.placeholder.com/300x300?text=Baby+Mütze+5" },
-    { name: "Baby Mütze 6", img: "https://via.placeholder.com/300x300?text=Baby+Mütze+6" },
-    { name: "Baby Mütze 7", img: "https://via.placeholder.com/300x300?text=Baby+Mütze+7" },
+    {
+        brand: "maximo",
+        name: "Winter-Strickmütze",
+        price: "24,99 €",
+        img: "./media/babymützen/babycap1.webp",
+    },
+    {
+        brand: "maximo",
+        name: "Winter-Strickmütze",
+        price: "24,99 €",
+        img: "./media/babymützen/babycap1.webp",
+    },
+    {
+        brand: "maximo",
+        name: "Winter-Strickmütze",
+        price: "24,99 €",
+        img: "./media/babymützen/babycap1.webp",
+    },
+    {
+        brand: "maximo",
+        name: "Winter-Strickmütze",
+        price: "24,99 €",
+        img: "./media/babymützen/babycap1.webp",
+    },{
+        brand: "maximo",
+        name: "Winter-Strickmütze",
+        price: "24,99 €",
+        img: "./media/babymützen/babycap1.webp",
+    },
+    {
+        brand: "maximo",
+        name: "Winter-Strickmütze",
+        price: "24,99 €",
+        img: "./media/babymützen/babycap1.webp",
+    },
+    {
+        brand: "maximo",
+        name: "Winter-Strickmütze",
+        price: "24,99 €",
+        img: "./media/babymützen/babycap1.webp",
+    },
+    {
+        brand: "maximo",
+        name: "Winter-Strickmütze",
+        price: "24,99 €",
+        img: "./media/babymützen/babycap1.webp",
+    },
+
 ];
 
-
-// slider erstellen
 products.forEach((product) => {
     createHTML_Element("div", {
         classes: "swiper-slide",
         placement: { target: ".swiper-wrapper", method: "append" },
         innerHTML: `
-        <img src="${product.img}" alt="${product.name}" style="width: 100%; border-radius: 8px;">
-        <p style="text-align:center; margin-top: 8px;">${product.name}</p>`,
+            <div style="border:1px solid #e0e0e0; padding:12px; display:flex; flex-direction:column; align-items:start; gap:3px; background:#fff; padding-top: 10px; height: 100%; justify-content: space-evenly">
+                <img src="${product.img}" alt="${
+            product.name
+        }" style="width:100%; object-fit:cover;">
+                <p style="font-size:14px; color:#666; margin:0;">maximo</p>
+                <p style="font-size:16px; font-weight:bold; color:#333; margin:0;">${
+                    product.name
+                }</p>
+                <p style="font-size:14px; color:#333; margin:0;">${
+                    product.price ?? "24,99 €"
+                }</p>
+            </div>
+        `,
     });
 });
 
-
-
-
 // 5️⃣ Pagination & Navigation
-createHTML_Element('div', { classes: 'swiper-pagination', placement: { target: '.swiper', method: 'append' } });
-createHTML_Element('div', { classes: 'swiper-button-next', placement: { target: '.swiper', method: 'append' } });
+createHTML_Element("div", {
+    classes: "swiper-scrollbar",
+    placement: { target: ".swiper", method: "append" },
+});
+/*createHTML_Element('div', { classes: 'swiper-button-next', placement: { target: '.swiper', method: 'append' } });
 createHTML_Element('div', { classes: 'swiper-button-prev', placement: { target: '.swiper', method: 'append' } });
+*/
 
-
-
-
-// 6️⃣ Swiper initialisieren
-const swiperInstance = new Swiper('.swiper', {
-    slidesPerView: 1,
-    spaceBetween: 16,
-    loop: true,
-    pagination: { el: '.swiper-pagination', clickable: true },
-    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+const swiperInstance = new Swiper(".swiper", {
+    slidesPerView: 2.5,
+    spaceBetween: 7,
+    scrollbar: {
+        el: ".swiper-scrollbar",
+        draggable: true,
+    },
+    loop: false,
+    pagination: { el: ".swiper-pagination", clickable: true },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
     breakpoints: {
-      640: { slidesPerView: 2, spaceBetween: 16 },
-      1024: { slidesPerView: 3, spaceBetween: 20 },
+        640: { slidesPerView: 2, spaceBetween: 16 },
+        1024: { slidesPerView: 4, spaceBetween: 20 },
     },
 });
-
-
 
 export { firstBabyClothesArticle };
