@@ -14,8 +14,8 @@ const secondBabyArticle  = createHTML_Element('article',{
 
 const topBrandsContainer = createHTML_Element('section', {
     innerHTML: `
-        <section style="width: 100%; display: flex; justify-content: center; padding: 16px;">
-            <p style="color: #3b3b3b; font-size: 24px; font-weight: 200;">Unsere Top Marken</p>
+        <section style="width: 100%; display: flex; justify-content: center; padding: 24px;">
+            <p style="color: #3b3b3b; font-size: 24px; font-weight: 200; padding-bottom: 36px">Unsere Top Marken</p>
         </section>
     `,
     placement: { target: '.second-baby-article', method: 'append' }
@@ -24,7 +24,7 @@ const topBrandsContainer = createHTML_Element('section', {
 const swiperSlider = createHTML_Element('section',{
     styles : {
         width: '100%',
-        padding: '16px',
+        paddingTop: '24px'
     },
     placement: {target: '.second-baby-article', method: 'append'},
     classes: 'swiper top-brands-swiper',
