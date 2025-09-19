@@ -84,7 +84,11 @@ const ctaButton = createHTML_Element("button", {
     },
 });
 
-// Slider section
+
+
+
+
+
 const productSlider = createHTML_Element("section", {
     classes: "swiper",
     placement: { target: "#firstBabyArticle", method: "append" },
@@ -94,14 +98,12 @@ const productSlider = createHTML_Element("section", {
     },
 });
 
-//wrapper
 const swipperWrapper = createHTML_Element("div", {
     classes: "swiper-wrapper",
     placement: { target: ".swiper", method: "append" },
     styles: { width: "50%", height: '300px'},
 });
 
-//Beispielprodukte müssen später durch echte Produktbilder ergänzt werden
 const products = [
     {
         brand: "maximo",
@@ -174,14 +176,11 @@ products.forEach((product) => {
     });
 });
 
-// 5️⃣ Pagination & Navigation
 createHTML_Element("div", {
     classes: "swiper-scrollbar",
     placement: { target: ".swiper", method: "append" },
 });
-/*createHTML_Element('div', { classes: 'swiper-button-next', placement: { target: '.swiper', method: 'append' } });
-createHTML_Element('div', { classes: 'swiper-button-prev', placement: { target: '.swiper', method: 'append' } });
-*/
+
 
 const swiperInstance = new Swiper(".swiper", {
     slidesPerView: 2.5,
@@ -203,3 +202,6 @@ const swiperInstance = new Swiper(".swiper", {
 });
 
 export { firstBabyClothesArticle };
+
+
+
