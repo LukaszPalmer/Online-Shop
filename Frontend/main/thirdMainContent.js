@@ -90,7 +90,7 @@ maxiCosiProducts.forEach(brand => {
                     brand.name
                 }</p>
                 <p style="font-size:14px; color:#333; margin:0;">${
-                    brand.price ?? "24,99 €"
+                    brand.price ?? "799.99 €"
                 }</p>
             </div>
         `,
