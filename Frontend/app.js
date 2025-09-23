@@ -5,8 +5,9 @@ import { babyBanner } from './banner/banner.js';
 
 import { firstBabyClothesArticle } from './main/manContent.js';
 import { secondBabyArticle } from './main/secondMainContent.js';
-
 import { thirdMainContainer } from './main/thirdMainContent.js';
+
+
 
 
 
@@ -21,3 +22,7 @@ babyBanner;
 firstBabyClothesArticle;
 secondBabyArticle;
 thirdMainContainer;
+
+
+
+

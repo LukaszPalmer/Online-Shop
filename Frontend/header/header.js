@@ -7,7 +7,6 @@ const header = createHTML_Element('header',{
 });
 
 
-
 const hamburgerMenu_SearchIcon_Container = createHTML_Element('section',{
     placement : {target: 'header', mathod: 'append'},
     classes: 'menuSearchIcon',
@@ -24,7 +23,7 @@ const hamburger = createHTML_Element('button',{
     styles:{
         border: 'none',
         outline: 'none',
-        backgroundColor: '',
+        backgroundColor: 'transparent',
         width: '30px',
         display: 'flex',
         flexDirection: 'column',
@@ -34,7 +33,8 @@ const hamburger = createHTML_Element('button',{
         cursor: 'pointer',
         order: '1',
         padding: '0.3rem',
-        flex: '0 0 auto'
+        flex: '0 0 auto',
+        position: 'relative',
     },
     placement: {target: '.menuSearchIcon', method: 'append'}
 })
@@ -57,6 +57,124 @@ const thirdHamburgerLine = createHTML_Element('span',{
     classes: 'thirdHamburgerLine',
     placement: {target: '#hamburger-menu', method: 'append'}
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// mobile hamburger
+
+const links = ["Home", "Buggies", "Contant", "About", "FAQ"];
+
+const nav = createHTML_Element('nav',{
+    attributes: {id: 'mobileNav'},
+    placement: {target: 'header', method: 'append'},
+    styles: {
+        display: 'none',
+        position: 'absolute',
+        top: '100%',
+        left: '0%',
+        right: '0%',
+        width: '100vw',
+        backgroundColor: '#fff',
+        flexDirection: 'column',
+        gap: '1rem',
+        padding: '1rem',
+        boxShadow: '0 2px 8px rgba(0,0,0,0.2)'
+    }
+});
+const navList = createHTML_Element('ul',{
+    placement: {target: '#mobileNav', method: 'append'},
+    styles: {
+        listStyle: 'none',
+        margin: '0',
+        padding: '0',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '1rem',
+    }
+});
+links.forEach((link) => {
+    const li = createHTML_Element('li',{
+        placement : {target: '#mobileNav ul', method : 'append'},        
+    });
+    createHTML_Element('a',{
+        text: link,
+        attributes: {href: `/${link.toLowerCase()}`},
+        placement: {target: 'li' , method: 'append'},
+        styles: {
+            textDecoration: 'none',
+            color: 'black',
+            fontSize: '1rem',
+            display: 'flex',
+            gap: '1rem'
+        }
+    });
+});
+hamburger.addEventListener("click", () =>  {
+    nav.style.display = nav.style.display === 'none' ? 'flex' : 'none';
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 const iconsContainer = createHTML_Element('section',{
