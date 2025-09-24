@@ -7,6 +7,7 @@ import { firstBabyClothesArticle } from './main/manContent.js';
 import { secondBabyArticle } from './main/secondMainContent.js';
 import { thirdMainContainer } from './main/thirdMainContent.js';
 import { newLetterContainer } from './main/newslatter.js';
+import { footer } from './components/footer.js';
 
 
 
@@ -23,7 +24,7 @@ firstBabyClothesArticle;
 secondBabyArticle;
 thirdMainContainer;
 newLetterContainer;
-
+footer;
 
 
 
