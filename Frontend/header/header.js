@@ -83,6 +83,7 @@ const nav = createHTML_Element('nav',{
         display: 'none',
         position: 'absolute',
         top: '100%',
+        height: '100vh',
         left: '0%',
         right: '0%',
         width: '100vw',
@@ -90,7 +91,6 @@ const nav = createHTML_Element('nav',{
         flexDirection: 'column',
         gap: '1rem',
         padding: '1rem',
-        boxShadow: '0 2px 8px rgba(0,0,0,0.2)'
     }
 });
 const navList = createHTML_Element('ul',{
@@ -98,7 +98,7 @@ const navList = createHTML_Element('ul',{
     styles: {
         listStyle: 'none',
         margin: '0',
-        padding: '0',
+        paddingTop: '24px',
         display: 'flex',
         flexDirection: 'column',
         gap: '1rem',
@@ -117,7 +117,7 @@ links.forEach((link) => {
             color: 'black',
             fontSize: '1rem',
             display: 'flex',
-            gap: '1rem'
+            gap: '1rem',
         }
     });
 });
